@@ -1,0 +1,47 @@
+@import './_variables'
+
+$header-1-3: calc(50% - (.5 * .9 * 150px) - 7.25px)
+
+.navbar
+  height: 120px
+  padding: 0 8%
+
+  display: grid
+  grid-template-columns: $header-1-3 150px $header-1-3
+
+  align-items: center
+  column-gap: 0
+
+  > :nth-child(3)
+    justify-self: end
+
+.title
+  text-transform: uppercase
+  transform: scale(0.9, 0.9)
+  width: 150px
+  text-align: center
+  
+
+
+.links
+  display: flex
+  justify-content: space-between
+  margin-top: 20px
+  margin-bottom: 20px
+  width: 290px
+
+:global(.hamburger),
+:global(.hamburger.hamburger.is-active)
+  padding: 0
+  :global(.hamburger-inner),
+  :global(.hamburger-inner::before),
+  :global(.hamburger-inner::after)
+    background-color: $white
+
+@media screen and (max-width: 1170px)
+  .links
+    display: none
+
+@media screen and (min-width: 1170px)
+  :global(.hamburger.hamburger)
+      display: none

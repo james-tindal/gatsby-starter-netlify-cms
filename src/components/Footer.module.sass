@@ -1,0 +1,36 @@
+@use 'sass:color'
+@import './_variables'
+
+.footer
+  ul
+    height: 160px
+    width: 1000px
+    display: flex
+    place-items: center stretch
+    justify-content: space-between
+    margin: 0 auto
+
+  li>a
+    background-color: color.adjust(white, $alpha: -0.9)
+    display: block
+    min-width: 152px
+    line-height: 35px
+    padding: 0 20px
+    text-align: center
+    border-radius: 200px
+    font-size: 12.5px
+
+
+    &[aria-current="page"]
+      background-color: color.adjust($light-blue, $alpha: -0.4)
+      &+div
+        background-color: $light-blue
+    
+    &+div
+      width: 40px
+      height: 14px
+      border-radius: 100px
+      margin: 20px auto
+
+
+
