@@ -7,7 +7,7 @@ const Footer = () =>
 <footer className={s.footer}>
   <ul>
     <li>
-      <Link to="/">Sessions</Link>
+      <Link to="/sessions">Sessions</Link>
       <div></div>
     </li>
     <li>
